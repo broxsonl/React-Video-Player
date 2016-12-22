@@ -1,9 +1,14 @@
 'use strict';
 
-import React from 'react';
+const React = require('react');
 
-const SearchBar = () => {
-  return <input />
-};
+// import React, { Component } from 'react';
+const Component = React.Component;
+
+class SearchBar extends Component {
+  render() {
+    return <input />
+  }
+}
 
 export default SearchBar;
