@@ -6,15 +6,20 @@ const React = require('react');
 const Component = React.Component;
 
 class SearchBar extends Component {
-  render() {
-    // The below html element will emit a change event, and that will run our onInputChange handler when it does.
-    return <input onChange={this.onInputChange} />
+  constructor(props) {
+    super(props);
+    // Only below do we change our state like this.
+    this.state = { term: '' }
   }
 
-  //event handler. Whenever the input changes, run the code inside
-  onInputChange() {
-    
+  render() {
+    return (
+    <div>
+    <input onChange={event => this.setState({ term: event.target.value})} />
+    </div>
+    );
   }
+
 }
 
 export default SearchBar;
