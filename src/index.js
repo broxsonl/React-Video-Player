@@ -1,10 +1,20 @@
 'use strict';
 
-const React = require('react');
-const ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import SearchBar from './components/search-bar';
+
+const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
 
 const App = () => {
-  return <div>Hello world!</div>;
-}
+  return (
+    <div>
+      <SearchBar />
+    </div>
+  );
+};
+
+
 
 ReactDOM.render(<App />, document.querySelector('.container'));
