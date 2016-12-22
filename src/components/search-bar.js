@@ -8,14 +8,16 @@ const Component = React.Component;
 class SearchBar extends Component {
   constructor(props) {
     super(props);
-    // Only below do we change our state like this.
+    // We initialize the state for term to an empty string.
     this.state = { term: '' }
   }
 
   render() {
     return (
     <div>
-    <input onChange={event => this.setState({ term: event.target.value})} />
+    <input
+      value={this.state.term}
+      onChange={event => this.setState({ term: event.target.value})} />
     </div>
     );
   }
