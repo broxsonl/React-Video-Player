@@ -18,6 +18,9 @@
   },
   "globals": {
   },
+  "parserOptions": {
+    "sourceType": "module"
+    },
   "ecmaFeatures": {
     "modules": true,
     "experimentalObjectRestSpread": true,
