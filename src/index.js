@@ -7,11 +7,11 @@ import SearchBar from './components/search-bar';
 import VideoList from './components/video-list';
 import VideoDetail from './components/video-detail';
 
-const YOUTUBE_API_KEY = require('../env.js')
+const YOUTUBE_API_KEY = require('../env.js');
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       videos: [],
@@ -21,7 +21,7 @@ class App extends Component {
     YTSearch({key: YOUTUBE_API_KEY, term: 'surfboards'}, (videos) => {
       this.setState({
         videos: videos,
-        selectedVideo: videos[0]
+        selectedVideo: videos[0],
       });
     });
   }
@@ -32,11 +32,11 @@ class App extends Component {
         <SearchBar />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
-          onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
+          onVideoSelect={selectedVideo => this.setState({selectedVideo})}
           videos={this.state.videos} />
       </div>
     );
   }
-};
+}
 
 ReactDOM.render(<App />, document.querySelector('.container'));
