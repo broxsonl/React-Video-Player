@@ -2,7 +2,7 @@
 bundle.js
 npm-debug.log
 db
-*.env
+*env.js
 build
 data/*
 coverage
