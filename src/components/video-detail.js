@@ -5,6 +5,7 @@ import React from 'react';
 const VideoDetail = ({video}) => {
 
   if (!video) {
+    // Could add a loading spinner instead of 'Loading...'
     return <div>Loading...</div>
   }
 
